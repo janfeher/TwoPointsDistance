@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Numerics;
-
-namespace TwoPointsDistance
+﻿namespace TwoPointsDistance
 {
     internal class Point
     {
@@ -45,14 +42,14 @@ namespace TwoPointsDistance
 
             if (parse1[0] && parse1[1] && parse2[0] && parse2[1])
             {
-                Point point1 = new Point(x1, y1);
+                Point point1 = new Point(x1, y1, "Point 1");
                 Console.Write(point1);
 
-                Point point2 = new Point(x2, y2);
-                Console.WriteLine(point2);
+                Point point2 = new Point(x2, y2, "Point 2");
+                Console.Write(point2);
 
                 double distance = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-                Console.WriteLine("Distance: " + distance);
+                Console.WriteLine("\nDistance: " + distance);
             }
         }
     }

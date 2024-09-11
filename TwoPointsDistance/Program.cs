@@ -2,8 +2,7 @@
 {
     internal class Point
     {
-        double x = 0;
-        double y = 0;
+        double x, y;
 
         readonly string name;
 
@@ -14,7 +13,7 @@
             this.name = name;
         }
 
-        public override string ToString()
+        public override string ToString() // informace o souřadnicích bodů
         {
             return name + "\n"
                 + "X: " + x + "\n"
@@ -25,6 +24,8 @@
         {
             double x1, y1, x2, y2;
 
+            /* pro každý bod jsem vytvořil pole, které na index 0 uloží true,
+             * pokud se podařilo převést x na double a na index 1 to samé pro y */
             Console.Write("First point\n"
                 + "X: ");
             bool[] parse1 = new bool[2];
@@ -40,6 +41,7 @@
 
             Console.WriteLine();
 
+            // obě souřadnice pro oba body jsou přeložené
             if (parse1[0] && parse1[1] && parse2[0] && parse2[1])
             {
                 Point point1 = new Point(x1, y1, "Point 1");

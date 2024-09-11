@@ -50,7 +50,7 @@
                 Point point2 = new Point(x2, y2, "Point 2");
                 Console.Write(point2);
 
-                double distance = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+                double distance = Math.Sqrt(Math.Pow(point2.x - point1.x, 2) + Math.Pow(point2.y - point1.y, 2));
                 Console.WriteLine("\nDistance: " + distance);
             }
         }
